@@ -1,6 +1,9 @@
 - name: Create Demo File
   hosts: all
-  tasks:
+  vars:
+    demo_message: "Default message"
+  
+    tasks:
     - name: Demo File
       copy:
         content: "{{ demo_message }}"
