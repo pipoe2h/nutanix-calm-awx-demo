@@ -3,5 +3,5 @@
   tasks:
     - name: Demo File
       copy:
-        content: {{ demo_message }}
+        content: "{{ demo_message }}"
         dest: "ansible_demo_file.txt"
