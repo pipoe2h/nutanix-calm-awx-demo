@@ -1,0 +1,7 @@
+- name: Create Demo File
+  hosts: all
+  tasks:
+    - name: Demo File
+      copy:
+        content: "Hello World!"
+        dest: "ansible_demo_file.txt"
