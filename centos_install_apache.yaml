@@ -6,6 +6,12 @@
     yum:
       name: httpd
       state: latest
+  - name: Create index.html
+    blockinfile:
+      path: /var/www/html/index.html
+      marker: "<!-- {mark} ANSIBLE MANAGED BLOCK -->"
+      block: |
+        { html }
   - name: Enable and start Apache service
     service:
       name: httpd
