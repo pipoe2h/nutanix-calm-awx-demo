@@ -12,7 +12,7 @@
       path: /var/www/html/index.html
       marker: "<!-- {mark} ANSIBLE MANAGED BLOCK -->"
       block: |
-        { html }
+        {{ html }}
   - name: Enable and start Apache service
     service:
       name: httpd
