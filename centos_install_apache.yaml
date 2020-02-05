@@ -6,6 +6,7 @@
     yum:
       name: httpd
       state: latest
+      disablerepo: "epel"
   - name: Create index.html
     blockinfile:
       create: yes
