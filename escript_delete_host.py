@@ -51,7 +51,6 @@ def make_api_call(url,method,username,username_secret):
             exit(0)
 
         else:
-            print "Luis"
             print("Request failed")
             print("Headers: {}".format(headers))
             print('Status code: {}'.format(resp.status_code))
@@ -86,11 +85,9 @@ def awx_delete_host(api,username,password,host_id):
     if r.ok:
         resp = json.loads(r.content)
         print 'Host with id {0} removed from inventory'.format(host_id)
-        print "Here"
         exit(0)
     else:
         print 'Post request failed', r.content
-        print "There"
         exit(1)
 # endregion
         
