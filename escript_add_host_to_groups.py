@@ -4,7 +4,7 @@
 # * version:    20200214
 # task_type:    Execute
 # task_name:    AwxAddHostToGroups
-# description:  Add host to AWX inventory 
+# description:  Add host to AWX inventory group
 # endregion
 
 # region capture Calm variables
