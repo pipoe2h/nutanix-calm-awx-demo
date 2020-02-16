@@ -1,0 +1,933 @@
+{
+    "status": {},
+    "contains_secrets": false,
+    "product_version": "2.9.7",
+    "spec": {
+        "description": "",
+        "resources": {
+            "client_attrs": {
+                "7df0cc1c_deployment_cloned_0": {
+                    "y": 84.3673932788,
+                    "x": 118.9405086285
+                },
+                "None": {
+                    "y": 279,
+                    "x": 316
+                }
+            },
+            "service_definition_list": [
+                {
+                    "singleton": false,
+                    "action_list": [
+                        {
+                            "description": "System action for creating an application",
+                            "type": "system",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_service",
+                                            "name": "CentOS"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "9807fe1b_dag",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "a992bd98_runbook",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "9807fe1b_dag"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "action_create"
+                        },
+                        {
+                            "description": "System action for deleting an application. Deletes created VMs as well",
+                            "type": "system",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_service",
+                                            "name": "CentOS"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "d3ab8fc3_dag",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "4fd20db5_runbook",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "d3ab8fc3_dag"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "action_delete"
+                        },
+                        {
+                            "description": "System action for starting an application",
+                            "type": "system",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_service",
+                                            "name": "CentOS"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "bfc74f9b_dag",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "e4dbbc0a_runbook",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "bfc74f9b_dag"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "action_start"
+                        },
+                        {
+                            "description": "System action for stopping an application",
+                            "type": "system",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_service",
+                                            "name": "CentOS"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "a5bfd22c_dag",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "0ecebc2f_runbook",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "a5bfd22c_dag"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "action_stop"
+                        },
+                        {
+                            "description": "System action for restarting an application",
+                            "type": "system",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_service",
+                                            "name": "CentOS"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "208adab8_dag",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "4e962233_runbook",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "208adab8_dag"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "action_restart"
+                        },
+                        {
+                            "description": "",
+                            "type": "user",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [
+                                            {
+                                                "kind": "app_task",
+                                                "name": "0_AddHost"
+                                            }
+                                        ],
+                                        "name": "1cbe2ad6_dag",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    },
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_service",
+                                            "name": "CentOS"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "0_AddHost",
+                                        "attrs": {
+                                            "exit_status": [],
+                                            "script": "# region headers\n# escript-template v20190605 \/ stephane.bourdeaud@nutanix.com\n# * author:     jose.gomez@nutanix.com\n# * version:    20200214\n# task_type:    Set Variable\n# task_name:    AwxAddHost\n# description:  Add host to AWX inventory \n# endregion\n\n# region capture Calm variables\n# * Capture variables here. This makes sure Calm macros are not referenced\n# * anywhere else in order to improve maintainability.\nawx_username = '@@{cred_awx.username}@@'\nawx_password = '@@{cred_awx.secret}@@'\nawx_api = '@@{awx_ip}@@'\nawx_inventory_id = int('@@{awx_inventory_id}@@')\nhost_ip = '@@{address}@@'\n\n# endregion\n\n# region functions\ndef make_api_call(url,method,username,username_secret,payload):\n    \"\"\"Makes an API call to an external API.\n\n    Args:\n        url: The URL for the external REST API endpoint.\n        method: The REST method to use.\n        username: The API user name.\n        username_secret: The API user name password.\n        payload: The JSON payload to include in the call.\n    \n    Returns:\n        The API response.\n    \"\"\"\n    headers = {\n    'Content-Type': 'application\/json',\n    'Accept': 'application\/json'\n    }\n    while True:\n        print(\"Making a {} API call to {}\".format(method, url))\n        resp = urlreq(\n            url,\n            verb=method,\n            auth='BASIC',\n            user=username,\n            passwd=username_secret,\n            params=json.dumps(payload),\n            headers=headers,\n            verify=False\n        )\n\n        # deal with the result\/response\n        if resp.ok:        \n            return resp\n\n        else:\n            print(\"Request failed\")\n            print(\"Headers: {}\".format(headers))\n            print(\"Payload: {}\".format(json.dumps(payload)))\n            print('Status code: {}'.format(resp.status_code))\n            print('Response: {}'.format(\n                json.dumps(\n                    json.loads(resp.content), \n                    indent=4)))\n            exit(1)\n\ndef awx_add_host(api,username,password,inventory_id,host_ip,host_variables='',host_enabled=True):\n    # region prepare api call\n    # Form method, url and headers for the API call\n    api_port = \"443\"\n    api_endpoint = \"\/api\/v2\/hosts\/\"\n    url = \"https:\/\/{}:{}{}\".format(\n        api,\n        api_port,\n        api_endpoint\n    )\n    method = \"POST\"\n\n    # endregion\n\n    # Compose the json payload\n    payload = {\n        'variables': host_variables,\n        'name': host_ip,\n        'enabled': host_enabled,\n        'inventory': inventory_id\n    }\n\n    r = make_api_call(\n        url,\n        method,\n        username,\n        password,\n        payload\n        )\n\n    if r.ok:\n        resp = json.loads(r.content)\n        print 'awx_host_id={0}'.format(resp['id'])\n        exit(0)\n    else:\n        print 'Post request failed', r.content\n        exit(1)\n# endregion\n        \nawx_add_host(awx_api,awx_username,awx_password,awx_inventory_id,host_ip)",
+                                            "eval_variables": [
+                                                "awx_host_id"
+                                            ],
+                                            "eval_scope": "local",
+                                            "type": "",
+                                            "script_type": "static"
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "SET_VARIABLE",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "ed84aba3_runbook",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "1cbe2ad6_dag"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "AwxAddHost"
+                        },
+                        {
+                            "description": "",
+                            "type": "user",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [
+                                            {
+                                                "kind": "app_task",
+                                                "name": "0_DeleteHost"
+                                            }
+                                        ],
+                                        "name": "1cbe2ad6_dag_cloned_1",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    },
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_service",
+                                            "name": "CentOS"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "0_DeleteHost",
+                                        "attrs": {
+                                            "script": "# region headers\n# escript-template v20190605 \/ stephane.bourdeaud@nutanix.com\n# * author:     jose.gomez@nutanix.com\n# * version:    20200214\n# task_type:    Execute\n# task_name:    AwxDeleteHost\n# description:  Delete host from AWX inventory \n# endregion\n\n# region capture Calm variables\n# * Capture variables here. This makes sure Calm macros are not referenced\n# * anywhere else in order to improve maintainability.\nawx_username = '@@{cred_awx.username}@@'\nawx_password = '@@{cred_awx.secret}@@'\nawx_api = '@@{awx_ip}@@'\nhost_id = int('@@{awx_host_id}@@')\n# endregion\n\n# region functions\ndef make_api_call(url,method,username,username_secret):\n    \"\"\"Makes an API call to an external API.\n\n    Args:\n        url: The URL for the external REST API endpoint.\n        method: The REST method to use.\n        username: The API user name.\n        username_secret: The API user name password.\n        payload: The JSON payload to include in the call.\n    \n    Returns:\n        The API response.\n    \"\"\"\n    headers = {\n    'Content-Type': 'application\/json',\n    'Accept': 'application\/json'\n    }\n    while True:\n        print(\"Making a {} API call to {}\".format(method, url))\n        resp = urlreq(\n            url,\n            verb=method,\n            auth='BASIC',\n            user=username,\n            passwd=username_secret,\n            headers=headers,\n            verify=False\n        )\n\n        # deal with the result\/response\n        if resp.ok: \n            exit(0)\n\n        else:\n            print \"Luis\"\n            print(\"Request failed\")\n            print(\"Headers: {}\".format(headers))\n            print('Status code: {}'.format(resp.status_code))\n            print('Response: {}'.format(\n                json.dumps(\n                    json.loads(resp.content), \n                    indent=4)))\n            exit(1)\n\ndef awx_delete_host(api,username,password,host_id):\n    # region prepare api call\n    # Form method, url and headers for the API call\n    api_port = \"443\"\n    api_endpoint = \"\/api\/v2\/hosts\/\"\n    url = \"https:\/\/{}:{}{}{}\".format(\n        api,\n        api_port,\n        api_endpoint,\n        host_id\n    )\n    method = \"DELETE\"\n\n    # endregion\n\n    r = make_api_call(\n        url,\n        method,\n        username,\n        password\n        )\n\n    if r.ok:\n        resp = json.loads(r.content)\n        print 'Host with id {0} removed from inventory'.format(host_id)\n        print \"Here\"\n        exit(0)\n    else:\n        print 'Post request failed', r.content\n        print \"There\"\n        exit(1)\n# endregion\n        \nawx_delete_host(awx_api,awx_username,awx_password,host_id)",
+                                            "type": "",
+                                            "command_line_args": "",
+                                            "exit_status": [],
+                                            "script_type": "static"
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "EXEC",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "ed84aba3_runbook_cloned_0",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "1cbe2ad6_dag_cloned_1"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "AwxDeleteHost"
+                        },
+                        {
+                            "description": "",
+                            "type": "user",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [
+                                            {
+                                                "kind": "app_task",
+                                                "name": "0_AddHostToGroups"
+                                            }
+                                        ],
+                                        "name": "1cbe2ad6_dag_cloned_1",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    },
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_service",
+                                            "name": "CentOS"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "0_AddHostToGroups",
+                                        "attrs": {
+                                            "script": "# region headers\n# escript-template v20190605 \/ stephane.bourdeaud@nutanix.com\n# * author:     jose.gomez@nutanix.com\n# * version:    20200214\n# task_type:    Execute\n# task_name:    AwxAddHostToGroups\n# description:  Add host to AWX inventory \n# endregion\n\n# region capture Calm variables\n# * Capture variables here. This makes sure Calm macros are not referenced\n# * anywhere else in order to improve maintainability.\nawx_username = '@@{cred_awx.username}@@'\nawx_password = '@@{cred_awx.secret}@@'\nawx_api = '@@{awx_ip}@@'\nawx_inventory_id = int('@@{awx_inventory_id}@@')\nawx_host_id = int('@@{awx_host_id}@@')\nawx_host_groups = @@{awx_host_groups}@@\n# endregion\n\n# region functions\ndef make_api_call(url,method,username,username_secret,payload=None):\n    \"\"\"Makes an API call to an external API.\n\n    Args:\n        url: The URL for the external REST API endpoint.\n        method: The REST method to use.\n        username: The API user name.\n        username_secret: The API user name password.\n        payload: The JSON payload to include in the call.\n    \n    Returns:\n        The API response.\n    \"\"\"\n    headers = {\n    'Content-Type': 'application\/json',\n    'Accept': 'application\/json'\n    }\n    while True:\n        print(\"Making a {} API call to {}\".format(method, url))\n        if payload:\n            resp = urlreq(\n                url,\n                verb=method,\n                auth='BASIC',\n                user=username,\n                passwd=username_secret,\n                params=json.dumps(payload),\n                headers=headers,\n                verify=False\n            )\n        else:\n            resp = urlreq(\n                url,\n                verb=method,\n                auth='BASIC',\n                user=username,\n                passwd=username_secret,\n                headers=headers,\n                verify=False\n            )\n\n        # deal with the result\/response\n        if resp.ok:     \n            return resp\n\n        else:\n            print(\"Request failed\")\n            print(\"Headers: {}\".format(headers))\n            print(\"Payload: {}\".format(json.dumps(payload)))\n            print('Status code: {}'.format(resp.status_code))\n            print('Response: {}'.format(\n                json.dumps(\n                    json.loads(resp.content), \n                    indent=4)))\n            exit(1)\n\ndef awx_add_host_to_groups(api,username,password,inventory_id,host_id,host_groups = [], *args):\n    # region prepare api call\n    # Form method, url and headers for the API call\n    api_port = \"443\"\n\n    for group in host_groups:\n        api_endpoint = \"\/api\/v2\/inventories\/\"\n        api_action = \"\/groups\"\n        api_query = \"?name=\"\n\n        url = \"https:\/\/{}:{}{}{}{}{}{}\".format(\n            api,\n            api_port,\n            api_endpoint,\n            inventory_id,\n            api_action,\n            api_query,\n            group\n        )\n        \n        method = \"GET\"\n\n        r = make_api_call(\n            url,\n            method,\n            username,\n            password\n        )\n        \n        if len(json.loads(r.content)['results']) > 0:\n            group_id = json.loads(r.content)['results'][0]['id']\n            payload = {\n                'id': host_id\n            }\n        else:\n            print \"Group {0} does no exist\".format(group)\n            break\n\n        api_endpoint = \"\/api\/v2\/groups\/\"\n        api_action = \"\/hosts\/\"\n\n        method = \"POST\"\n\n        url = \"https:\/\/{}:{}{}{}{}\".format(\n            api,\n            api_port,\n            api_endpoint,\n            group_id,\n            api_action,            \n        )\n\n        r = make_api_call(\n            url,\n            method,\n            username,\n            password,\n            payload\n        )\n\n        if r.ok:\n            print \"Host added to group {0}\".format(group)\n        else:\n            print 'Post request failed', r.content\n            exit(1)\n# endregion\n        \nawx_add_host_to_groups(awx_api,awx_username,awx_password,awx_inventory_id,awx_host_id,awx_host_groups)",
+                                            "type": "",
+                                            "command_line_args": "",
+                                            "exit_status": [],
+                                            "script_type": "static"
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "EXEC",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "ed84aba3_runbook_cloned_1",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "1cbe2ad6_dag_cloned_1"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "AwxAddHostToGroups"
+                        }
+                    ],
+                    "depends_on_list": [],
+                    "name": "CentOS",
+                    "port_list": [],
+                    "tier": "",
+                    "variable_list": [
+                        {
+                            "val_type": "STRING",
+                            "is_mandatory": false,
+                            "description": "",
+                            "data_type": "BASE",
+                            "type": "LOCAL",
+                            "name": "awx_host_id",
+                            "value": "",
+                            "label": "",
+                            "attrs": {
+                                "type": ""
+                            },
+                            "is_hidden": false,
+                            "options": {
+                                "type": "PREDEFINED",
+                                "choices": []
+                            }
+                        },
+                        {
+                            "regex": {
+                                "should_validate": false,
+                                "value": "^.*$"
+                            },
+                            "val_type": "STRING",
+                            "is_mandatory": false,
+                            "description": "",
+                            "data_type": "BASE",
+                            "type": "LOCAL",
+                            "library_reference": "8c8b079a-0cc0-46c1-a28e-843341ad8ca8",
+                            "name": "awx_host_groups",
+                            "value": "['demo','demo1']",
+                            "label": "",
+                            "attrs": {
+                                "type": "LOCAL"
+                            },
+                            "editables": {
+                                "value": true
+                            },
+                            "is_hidden": true,
+                            "options": {
+                                "type": "PREDEFINED",
+                                "choices": []
+                            }
+                        }
+                    ],
+                    "description": ""
+                }
+            ],
+            "substrate_definition_list": [
+                {
+                    "description": "",
+                    "action_list": [
+                        {
+                            "description": "",
+                            "type": "fragment",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_substrate",
+                                            "name": "CentOSVM"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "01e0ee8a_dag",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "1e5ff1df_runbook",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "01e0ee8a_dag"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "pre_action_create"
+                        },
+                        {
+                            "description": "",
+                            "type": "fragment",
+                            "critical": false,
+                            "runbook": {
+                                "task_definition_list": [
+                                    {
+                                        "target_any_local_reference": {
+                                            "kind": "app_substrate",
+                                            "name": "CentOSVM"
+                                        },
+                                        "retries": "0",
+                                        "description": "",
+                                        "child_tasks_local_reference_list": [],
+                                        "name": "49240789_dag",
+                                        "attrs": {
+                                            "edges": [],
+                                            "type": ""
+                                        },
+                                        "timeout_secs": "0",
+                                        "type": "DAG",
+                                        "variable_list": []
+                                    }
+                                ],
+                                "description": "",
+                                "name": "0b167871_runbook",
+                                "main_task_local_reference": {
+                                    "kind": "app_task",
+                                    "name": "49240789_dag"
+                                },
+                                "variable_list": []
+                            },
+                            "name": "post_action_delete"
+                        }
+                    ],
+                    "type": "AHV_VM",
+                    "name": "CentOSVM",
+                    "readiness_probe": {
+                        "connection_type": "SSH",
+                        "retries": "5",
+                        "connection_protocol": "",
+                        "connection_port": 22,
+                        "address": "@@{platform.status.resources.nic_list[0].ip_endpoint_list[0].ip}@@",
+                        "delay_secs": "60",
+                        "disable_readiness_probe": false,
+                        "login_credential_local_reference": {
+                            "kind": "app_credential",
+                            "name": "cred_os"
+                        }
+                    },
+                    "editables": {
+                        "create_spec": {
+                            "resources": {
+                                "nic_list": {},
+                                "serial_port_list": {}
+                            }
+                        }
+                    },
+                    "os_type": "Linux",
+                    "create_spec": {
+                        "name": "vm-@@{calm_array_index}@@-@@{calm_time}@@",
+                        "resources": {
+                            "nic_list": [
+                                {
+                                    "nic_type": "NORMAL_NIC",
+                                    "ip_endpoint_list": [],
+                                    "network_function_chain_reference": null,
+                                    "network_function_nic_type": "INGRESS",
+                                    "mac_address": "",
+                                    "subnet_reference": {
+                                        "kind": "subnet",
+                                        "type": "",
+                                        "name": "",
+                                        "uuid": "e28bce98-3eef-4be7-8df9-bf9726dccba2"
+                                    },
+                                    "type": ""
+                                }
+                            ],
+                            "serial_port_list": [],
+                            "guest_tools": null,
+                            "num_vcpus_per_socket": 1,
+                            "num_sockets": 1,
+                            "gpu_list": [],
+                            "memory_size_mib": 1024,
+                            "parent_reference": null,
+                            "hardware_clock_timezone": "",
+                            "guest_customization": {
+                                "cloud_init": {
+                                    "meta_data": "",
+                                    "type": "",
+                                    "user_data": "#cloud-config\nhostname: @@{name}@@\nusers:\n - name: @@{cred_os.username}@@\n   sudo: ['ALL=(ALL) NOPASSWD:ALL']\nssh_pwauth: True\nchpasswd:\n list: |\n   @@{cred_os.username}@@:@@{cred_os.secret}@@\n expire: False"
+                                },
+                                "type": "",
+                                "sysprep": null
+                            },
+                            "power_state": "ON",
+                            "type": "",
+                            "account_uuid": "4ad90864-dcc6-47d1-9dfb-9feede5927a5",
+                            "boot_config": {
+                                "boot_device": {
+                                    "type": "",
+                                    "disk_address": {
+                                        "type": "",
+                                        "device_index": 0,
+                                        "adapter_type": "SCSI"
+                                    }
+                                },
+                                "type": "",
+                                "boot_type": "",
+                                "mac_address": ""
+                            },
+                            "disk_list": [
+                                {
+                                    "data_source_reference": {
+                                        "kind": "image",
+                                        "type": "",
+                                        "name": "CentOS_7_Cloud",
+                                        "uuid": "d3893b21-a962-439d-879d-2a07daf3b2e4"
+                                    },
+                                    "type": "",
+                                    "disk_size_mib": 0,
+                                    "volume_group_reference": null,
+                                    "device_properties": {
+                                        "type": "",
+                                        "disk_address": {
+                                            "type": "",
+                                            "device_index": 0,
+                                            "adapter_type": "SCSI"
+                                        },
+                                        "device_type": "DISK"
+                                    }
+                                }
+                            ]
+                        },
+                        "availability_zone_reference": null,
+                        "backup_policy": null,
+                        "type": "",
+                        "cluster_reference": null,
+                        "categories": ""
+                    },
+                    "variable_list": []
+                }
+            ],
+            "credential_definition_list": [
+                {
+                    "username": "centos",
+                    "description": "",
+                    "type": "PASSWORD",
+                    "secret": {
+                        "attrs": {
+                            "is_secret_modified": false,
+                            "secret_reference": {}
+                        }
+                    },
+                    "name": "cred_os",
+                    "editables": {
+                        "username": true,
+                        "secret": true
+                    }
+                },
+                {
+                    "username": "admin",
+                    "description": "",
+                    "type": "PASSWORD",
+                    "secret": {
+                        "attrs": {
+                            "is_secret_modified": false,
+                            "secret_reference": {}
+                        }
+                    },
+                    "name": "cred_awx"
+                }
+            ],
+            "package_definition_list": [
+                {
+                    "description": "",
+                    "action_list": [],
+                    "type": "SUBSTRATE_IMAGE",
+                    "service_local_reference_list": [],
+                    "name": "AHV_CENTOS_76",
+                    "version": "",
+                    "options": {
+                        "type": "",
+                        "name": "AHV_CENTOS_76",
+                        "resources": {
+                            "image_type": "DISK_IMAGE",
+                            "checksum": {
+                                "checksum_algorithm": "",
+                                "type": "",
+                                "checksum_value": ""
+                            },
+                            "source_uri": "http:\/\/download.nutanix.com\/calm\/CentOS-7-x86_64-1810.qcow2",
+                            "version": {
+                                "product_version": "",
+                                "type": "",
+                                "product_name": ""
+                            },
+                            "architecture": "X86_64",
+                            "type": ""
+                        },
+                        "description": ""
+                    },
+                    "variable_list": []
+                },
+                {
+                    "description": "",
+                    "action_list": [],
+                    "type": "DEB",
+                    "service_local_reference_list": [
+                        {
+                            "kind": "app_service",
+                            "name": "CentOS"
+                        }
+                    ],
+                    "name": "APACHE_PHP_PACKAGE_VMware",
+                    "version": "",
+                    "options": {
+                        "install_runbook": {
+                            "task_definition_list": [
+                                {
+                                    "target_any_local_reference": {
+                                        "kind": "app_package",
+                                        "name": "APACHE_PHP_PACKAGE_VMware"
+                                    },
+                                    "retries": "0",
+                                    "description": "",
+                                    "message_list": [],
+                                    "child_tasks_local_reference_list": [
+                                        {
+                                            "kind": "app_task",
+                                            "name": "1_AwxAddHost"
+                                        },
+                                        {
+                                            "kind": "app_task",
+                                            "name": "2_AwxAddHostToGroups"
+                                        }
+                                    ],
+                                    "name": "27550204_dag_cloned_1",
+                                    "state": "ACTIVE",
+                                    "attrs": {
+                                        "edges": [
+                                            {
+                                                "from_task_reference": {
+                                                    "kind": "app_task",
+                                                    "name": "1_AwxAddHost"
+                                                },
+                                                "edge_type": "user_defined",
+                                                "type": "",
+                                                "to_task_reference": {
+                                                    "kind": "app_task",
+                                                    "name": "2_AwxAddHostToGroups"
+                                                }
+                                            }
+                                        ],
+                                        "type": ""
+                                    },
+                                    "timeout_secs": "0",
+                                    "type": "DAG",
+                                    "variable_list": []
+                                },
+                                {
+                                    "target_any_local_reference": {
+                                        "kind": "app_service",
+                                        "name": "CentOS"
+                                    },
+                                    "retries": "0",
+                                    "description": "",
+                                    "message_list": [],
+                                    "child_tasks_local_reference_list": [],
+                                    "name": "1_AwxAddHost",
+                                    "state": "ACTIVE",
+                                    "attrs": {
+                                        "type": "CALL_RUNBOOK",
+                                        "inarg_list": [],
+                                        "runbook_reference": {
+                                            "kind": "app_runbook",
+                                            "name": "ed84aba3_runbook"
+                                        }
+                                    },
+                                    "timeout_secs": "0",
+                                    "type": "CALL_RUNBOOK",
+                                    "variable_list": []
+                                },
+                                {
+                                    "target_any_local_reference": {
+                                        "kind": "app_service",
+                                        "name": "CentOS"
+                                    },
+                                    "retries": "0",
+                                    "description": "",
+                                    "message_list": [],
+                                    "child_tasks_local_reference_list": [],
+                                    "name": "2_AwxAddHostToGroups",
+                                    "state": "ACTIVE",
+                                    "attrs": {
+                                        "type": "CALL_RUNBOOK",
+                                        "inarg_list": [],
+                                        "runbook_reference": {
+                                            "kind": "app_runbook",
+                                            "name": "ed84aba3_runbook_cloned_1"
+                                        }
+                                    },
+                                    "timeout_secs": "0",
+                                    "type": "CALL_RUNBOOK",
+                                    "variable_list": []
+                                }
+                            ],
+                            "description": "",
+                            "name": "124852e5_runbook_cloned_0",
+                            "state": "ACTIVE",
+                            "main_task_local_reference": {
+                                "kind": "app_task",
+                                "name": "27550204_dag_cloned_1"
+                            },
+                            "message_list": [],
+                            "variable_list": []
+                        },
+                        "type": "",
+                        "uninstall_runbook": {
+                            "task_definition_list": [
+                                {
+                                    "target_any_local_reference": {
+                                        "kind": "app_package",
+                                        "name": "APACHE_PHP_PACKAGE_VMware"
+                                    },
+                                    "retries": "0",
+                                    "description": "",
+                                    "message_list": [],
+                                    "child_tasks_local_reference_list": [
+                                        {
+                                            "kind": "app_task",
+                                            "name": "1_AwxDeleteHost"
+                                        }
+                                    ],
+                                    "name": "11c3b039_dag_cloned_1",
+                                    "state": "ACTIVE",
+                                    "attrs": {
+                                        "edges": [],
+                                        "type": ""
+                                    },
+                                    "timeout_secs": "0",
+                                    "type": "DAG",
+                                    "variable_list": []
+                                },
+                                {
+                                    "target_any_local_reference": {
+                                        "kind": "app_service",
+                                        "name": "CentOS"
+                                    },
+                                    "retries": "0",
+                                    "description": "",
+                                    "message_list": [],
+                                    "child_tasks_local_reference_list": [],
+                                    "name": "1_AwxDeleteHost",
+                                    "state": "ACTIVE",
+                                    "attrs": {
+                                        "type": "CALL_RUNBOOK",
+                                        "inarg_list": [],
+                                        "runbook_reference": {
+                                            "kind": "app_runbook",
+                                            "name": "ed84aba3_runbook_cloned_0"
+                                        }
+                                    },
+                                    "timeout_secs": "0",
+                                    "type": "CALL_RUNBOOK",
+                                    "variable_list": []
+                                }
+                            ],
+                            "description": "",
+                            "name": "afe7faff_runbook_cloned_0",
+                            "state": "ACTIVE",
+                            "main_task_local_reference": {
+                                "kind": "app_task",
+                                "name": "11c3b039_dag_cloned_1"
+                            },
+                            "message_list": [],
+                            "variable_list": []
+                        }
+                    },
+                    "variable_list": []
+                }
+            ],
+            "app_profile_list": [
+                {
+                    "deployment_create_list": [
+                        {
+                            "type": "GREENFIELD",
+                            "action_list": [],
+                            "name": "7df0cc1c_deployment_cloned_0",
+                            "min_replicas": "1",
+                            "default_replicas": "1",
+                            "depends_on_list": [],
+                            "editables": {
+                                "min_replicas": true,
+                                "max_replicas": true
+                            },
+                            "published_service_local_reference_list": [],
+                            "max_replicas": "1",
+                            "package_local_reference_list": [
+                                {
+                                    "kind": "app_package",
+                                    "name": "APACHE_PHP_PACKAGE_VMware"
+                                }
+                            ],
+                            "substrate_local_reference": {
+                                "kind": "app_substrate",
+                                "name": "CentOSVM"
+                            },
+                            "variable_list": [],
+                            "description": ""
+                        }
+                    ],
+                    "description": "",
+                    "action_list": [],
+                    "name": "Default",
+                    "variable_list": [
+                        {
+                            "val_type": "STRING",
+                            "is_mandatory": false,
+                            "description": "",
+                            "data_type": "BASE",
+                            "type": "LOCAL",
+                            "name": "awx_ip",
+                            "value": "awx.ukdemo.local",
+                            "label": "",
+                            "attrs": {
+                                "type": ""
+                            },
+                            "editables": {
+                                "value": false
+                            },
+                            "is_hidden": true,
+                            "options": {
+                                "type": "PREDEFINED",
+                                "choices": []
+                            }
+                        },
+                        {
+                            "val_type": "STRING",
+                            "is_mandatory": false,
+                            "description": "",
+                            "data_type": "BASE",
+                            "type": "LOCAL",
+                            "name": "awx_inventory_id",
+                            "value": "1",
+                            "label": "",
+                            "attrs": {
+                                "type": ""
+                            },
+                            "editables": {
+                                "value": false
+                            },
+                            "is_hidden": true,
+                            "options": {
+                                "type": "PREDEFINED",
+                                "choices": []
+                            }
+                        }
+                    ]
+                }
+            ],
+            "published_service_definition_list": [],
+            "default_credential_local_reference": {
+                "kind": "app_credential",
+                "name": "cred_os"
+            },
+            "type": "USER"
+        },
+        "name": "calm-ansible-integration"
+    },
+    "api_version": "3.0",
+    "metadata": {
+        "last_update_time": "1581864564939573",
+        "kind": "blueprint",
+        "spec_version": 32,
+        "creation_time": "1581701587018146",
+        "categories": {
+            "AppFamily": "DevOps"
+        },
+        "name": "calm-ansible-integration"
+    }
+}

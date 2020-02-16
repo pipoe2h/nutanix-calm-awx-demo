@@ -1,0 +1,19 @@
+# Password based authentication
+#cloud-config
+hostname: @@{name}@@
+users:
+  - name: @@{cred_os.username}@@
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+ssh_pwauth: True
+chpasswd:
+  list: |
+    @@{cred_os.username}@@:@@{cred_os.secret}@@
+  expire: False
+
+# SSH keys based authentication
+hostname: @@{name}@@
+users:
+  - name: @@{cred_os.username}@@
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - @@{cred_os.public_key}
