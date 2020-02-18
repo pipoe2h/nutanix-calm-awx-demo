@@ -1,12 +1,16 @@
 - name: Install Apache
   hosts: all
+  var:
+    html: |
+      <html>
+      <h1>Default message</h1>
+      </html>
   
   tasks:
   - name: Install the latest version of Apache
     yum:
       name: httpd
       state: latest
-      disablerepo: "epel"
   - name: Create index.html
     blockinfile:
       create: yes
