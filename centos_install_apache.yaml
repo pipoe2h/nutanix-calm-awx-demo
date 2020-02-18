@@ -1,6 +1,6 @@
 - name: Install Apache
   hosts: all
-  var:
+  vars:
     html: |
       <html>
       <h1>Default message</h1>
