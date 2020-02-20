@@ -149,7 +149,7 @@ def awx_poll_job(api,username,password,job_id):
 
             if job_status == "failed" or job_status == "error":
                 print "Ansible job failed"
-                break
+                exit(1)
         else:
             print 'Post request failed', r.content
             exit(1)
