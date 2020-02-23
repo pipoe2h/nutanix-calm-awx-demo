@@ -663,7 +663,7 @@
                             "name": "CentOS"
                         }
                     ],
-                    "name": "APACHE_PHP_PACKAGE_VMware",
+                    "name": "PACKAGE_AHV",
                     "version": "",
                     "options": {
                         "install_runbook": {
@@ -671,7 +671,7 @@
                                 {
                                     "target_any_local_reference": {
                                         "kind": "app_package",
-                                        "name": "APACHE_PHP_PACKAGE_VMware"
+                                        "name": "PACKAGE_AHV"
                                     },
                                     "retries": "0",
                                     "description": "",
@@ -772,7 +772,7 @@
                                 {
                                     "target_any_local_reference": {
                                         "kind": "app_package",
-                                        "name": "APACHE_PHP_PACKAGE_VMware"
+                                        "name": "PACKAGE_AHV"
                                     },
                                     "retries": "0",
                                     "description": "",
@@ -850,7 +850,7 @@
                             "package_local_reference_list": [
                                 {
                                     "kind": "app_package",
-                                    "name": "APACHE_PHP_PACKAGE_VMware"
+                                    "name": "PACKAGE_AHV"
                                 }
                             ],
                             "substrate_local_reference": {
