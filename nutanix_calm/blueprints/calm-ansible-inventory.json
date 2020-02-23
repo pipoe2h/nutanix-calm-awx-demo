@@ -917,7 +917,7 @@
             },
             "type": "USER"
         },
-        "name": "calm-ansible-integration"
+        "name": "calm-ansible-inventory"
     },
     "api_version": "3.0",
     "metadata": {
@@ -928,6 +928,6 @@
         "categories": {
             "AppFamily": "DevOps"
         },
-        "name": "calm-ansible-integration"
+        "name": "calm-ansible-inventory"
     }
 }
