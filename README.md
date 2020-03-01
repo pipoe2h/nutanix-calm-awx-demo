@@ -7,3 +7,5 @@
 ## Part 2: Launching a Job Template Management
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/y1vckrsmNH0/0.jpg)](https://youtu.be/y1vckrsmNH0)
+
+## Part 3: Multi-Machine Application
